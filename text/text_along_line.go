@@ -6,7 +6,7 @@ import (
 
 	"github.com/llgcode/draw2d/draw2dimg"
 
-	"github.com/rockwell-uk/go-text/fonts"
+	"github.com/db-tech-uk/go-text/fonts"
 )
 
 type TextGlyph struct {
@@ -130,7 +130,7 @@ func calculateLetterPositions(label string, charMetrics []CharMetric, lineData [
 }
 
 func getCharMetrics(label string, tf fonts.TypeFace) []CharMetric {
-	charMetrics := []CharMetric{}
+	charMetrics := make([]CharMetric, 0, len(label))
 
 	for i, r := range label {
 		charMetrics = append(charMetrics, CharMetric{
@@ -156,7 +156,7 @@ func GetLineData(lineCoords [][]float64) MultiLineData {
 			y = pos[1] - prevPos[1]
 
 			angle := math.Atan2(y, x) / (math.Pi / 180)
-			hypotenuse := math.Sqrt(math.Pow(x, 2) + math.Pow(y, 2))
+			hypotenuse := math.Sqrt(x*x + y*y)
 
 			lineData = append(lineData, LineData{
 				Pos: []float64{

@@ -19,3 +19,4 @@ dev
 ._.DS_Store
 .DS_Store
 .vscode
+.golangci.bck.yml

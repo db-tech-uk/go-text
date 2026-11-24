@@ -10,13 +10,13 @@ import (
 	"reflect"
 	"testing"
 
+	textdraw "github.com/db-tech-uk/go-draw/draw"
 	"github.com/golang/freetype/truetype"
 	"github.com/llgcode/draw2d"
 	"github.com/llgcode/draw2d/draw2dimg"
-	textdraw "github.com/rockwell-uk/go-draw/draw"
 
-	"github.com/rockwell-uk/go-text/fonts"
-	"github.com/rockwell-uk/go-text/fonts/ttf"
+	"github.com/db-tech-uk/go-text/fonts"
+	"github.com/db-tech-uk/go-text/fonts/ttf"
 )
 
 var (
@@ -25,6 +25,7 @@ var (
 	pink  = color.RGBA{0xEC, 0x74, 0xB4, 0xFF}
 )
 
+//nolint:goconst
 func TestGetCharMetrics(t *testing.T) {
 	tests := map[string]struct {
 		wkt      string
@@ -92,7 +93,7 @@ func TestGetCharMetrics(t *testing.T) {
 		}
 
 		metrics := getCharMetrics(tt.label, typeFace)
-		actual := []float64{}
+		actual := make([]float64, 0, len(metrics))
 
 		for _, m := range metrics {
 			actual = append(actual, m.Width)

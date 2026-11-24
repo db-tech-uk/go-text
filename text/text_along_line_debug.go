@@ -4,10 +4,10 @@ import (
 	"image/color"
 	"math"
 
+	"github.com/db-tech-uk/go-draw/draw"
 	"github.com/llgcode/draw2d/draw2dimg"
-	"github.com/rockwell-uk/go-draw/draw"
 
-	"github.com/rockwell-uk/go-text/fonts"
+	"github.com/db-tech-uk/go-text/fonts"
 )
 
 func DrawGlyphOutlines(gc *draw2dimg.GraphicContext, label string, lineCoords [][]float64, tf fonts.TypeFace) error {

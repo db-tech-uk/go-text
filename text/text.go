@@ -3,7 +3,7 @@ package text
 import (
 	"strings"
 
-	"github.com/rockwell-uk/go-text/fonts"
+	"github.com/db-tech-uk/go-text/fonts"
 )
 
 func SplitStringInTwo(s string, split func(string) bool) []string {

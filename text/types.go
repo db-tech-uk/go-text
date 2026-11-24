@@ -3,7 +3,7 @@ package text
 import (
 	"fmt"
 
-	"github.com/rockwell-uk/go-text/fonts"
+	"github.com/db-tech-uk/go-text/fonts"
 )
 
 type CharMetric struct {

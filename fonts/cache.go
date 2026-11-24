@@ -9,7 +9,7 @@ import (
 	"github.com/golang/freetype/truetype"
 	"github.com/llgcode/draw2d"
 
-	"github.com/rockwell-uk/go-text/fonts/ttf"
+	"github.com/db-tech-uk/go-text/fonts/ttf"
 )
 
 type MyFontCache map[string]*truetype.Font

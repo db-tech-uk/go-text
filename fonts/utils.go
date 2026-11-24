@@ -6,10 +6,10 @@ import (
 	"image/color"
 	"math"
 
+	"github.com/db-tech-uk/csync/mutex"
 	"github.com/golang/freetype/truetype"
 	"github.com/llgcode/draw2d"
 	"github.com/llgcode/draw2d/draw2dimg"
-	"github.com/rockwell-uk/csync/mutex"
 	"golang.org/x/image/font"
 	"golang.org/x/image/math/fixed"
 )
