@@ -21,7 +21,7 @@ jobs:
       - name: Install dependencies
         run: |
           sudo apt-get install -y libgeos-dev
-      - uses: actions/setup-go@4d34df0c2316fe8122ab82dc22947d607c0c91f9
+      - uses: actions/setup-go@d8cbb8045d7f43706b9177cceb36c1f91a6644d5
         with:
           go-version: ${{ matrix.go-version }}
       - uses: actions/checkout@8f4b7f84864484a7bf31766abe9204da3cbe65b3
